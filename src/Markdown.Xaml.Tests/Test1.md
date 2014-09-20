@@ -8,7 +8,7 @@ consectetur faucibus quis a urna.
 Header 2
 -----------
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis orci erat, 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis orci erat,
 hendrerit et interdum at, feugiat non diam. Vestibulum id odio non elit 
 consectetur faucibus quis a urna. 
 

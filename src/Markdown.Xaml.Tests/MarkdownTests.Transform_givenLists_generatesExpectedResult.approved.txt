@@ -162,7 +162,7 @@
   <List MarkerStyle="Decimal">
     <ListItem>
       <Paragraph>Item 1, graf one.</Paragraph>
-      <Paragraph> Item 2. graf two. The quick brown fox jumped over the lazy dog's back.</Paragraph>
+      <Paragraph xml:space="preserve"> Item 2. graf two. The quick brown fox jumped over the lazy dog's<LineBreak /> back.</Paragraph>
     </ListItem>
     <ListItem>
       <Paragraph>Item 2.</Paragraph>
@@ -174,7 +174,7 @@
   <Paragraph>Nested</Paragraph>
   <List MarkerStyle="Disc">
     <ListItem>
-      <Paragraph>Tab * Tab * Tab</Paragraph>
+      <Paragraph xml:space="preserve">Tab<LineBreak /> * Tab<LineBreak /> * Tab</Paragraph>
     </ListItem>
   </List>
   <Paragraph>Here's another:</Paragraph>
@@ -183,7 +183,7 @@
       <Paragraph>First</Paragraph>
     </ListItem>
     <ListItem>
-      <Paragraph>Second: * Fee * Fie * Foe</Paragraph>
+      <Paragraph xml:space="preserve">Second:<LineBreak /> * Fee<LineBreak /> * Fie<LineBreak /> * Foe</Paragraph>
     </ListItem>
     <ListItem>
       <Paragraph>Third</Paragraph>
@@ -195,7 +195,7 @@
       <Paragraph>First</Paragraph>
     </ListItem>
     <ListItem>
-      <Paragraph>Second: * Fee * Fie * Foe</Paragraph>
+      <Paragraph xml:space="preserve">Second:<LineBreak /> * Fee<LineBreak /> * Fie<LineBreak /> * Foe</Paragraph>
     </ListItem>
     <ListItem>
       <Paragraph>Third</Paragraph>

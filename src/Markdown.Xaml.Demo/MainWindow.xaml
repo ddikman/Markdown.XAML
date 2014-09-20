@@ -15,7 +15,7 @@
             <Setter Property="TextAlignment"
                     Value="Left" />
         </Style>
-               
+
         <Style x:Key="PageHeader"
                TargetType="Paragraph">
             <Setter Property="FontSize"
@@ -52,8 +52,7 @@
                         Heading2Style="{StaticResource SubHeader}"
                         Heading3Style="{StaticResource SubHeaderSecondary}"/>
 
-        <local:TextToFlowDocumentConverter x:Key="TextToFlowDocumentConverter" 
-                                           Markdown="{StaticResource Markdown}"/>
+        <local:TextToFlowDocumentConverter x:Key="TextToFlowDocumentConverter" Markdown="{StaticResource Markdown}"/>
 
     </Window.Resources>
 
@@ -77,8 +76,7 @@
                                   Grid.Column="1"
                                   VerticalAlignment="Stretch"
                                   HorizontalAlignment="Stretch"
-                                  Margin="5"
-                                  Document="{Binding ElementName=editSource, Path=Text, Converter={StaticResource TextToFlowDocumentConverter}}" />
+                                  Document="{Binding ElementName=editSource, Path=Text, Converter={StaticResource TextToFlowDocumentConverter}}" Grid.ColumnSpan="2" />
 
     </Grid>
 </Window>

@@ -171,7 +171,7 @@ namespace Markdown.Xaml
             return DoCodeSpans(text,
                 s0 => DoAnchors(s0,
                 s1 => DoItalicsAndBold(s1,
-                s2 => DoText(s2))));
+                s3 => DoText(s3))));
 
             //text = EscapeSpecialCharsWithinTagAttributes(text);
             //text = EscapeBackslashes(text);
@@ -869,12 +869,23 @@ namespace Markdown.Xaml
         public IEnumerable<Inline> DoText(string text)
         {
             if (text == null)
-            {
                 throw new ArgumentNullException("text");
-            }
 
-            var t = _eoln.Replace(text, " ");
-            yield return new Run(t);
+            var lines = text.Split('\n');
+            return DivideWith<Inline>(() => new LineBreak(), lines.Select(l => new Run(_eoln.Replace(l, " "))));
         }
+
+        private IEnumerable<T> DivideWith<T>(Func<T> divider, IEnumerable<T> items)
+        {
+            bool first = true;
+            foreach (var item in items)
+            {
+                if (!first)
+                    yield return divider();
+
+                yield return item;
+                first = false;
+            }
+        } 
     }
 }
